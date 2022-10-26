@@ -38,16 +38,14 @@ and reference therein). One of the science cases we investigate is photometric r
 mapping in the context of Legacy Survey of Space and Time (LSST) survey strategies (see `Jankov et
 al. 2022 <https://ui.adsabs.harvard.edu/abs/2022AN....34310090J/abstract>`__). However, this module is **general** and is meant to be used for cross-correlation of spectroscopic or photometric light curves, same as the original Fortran version.
 
-..
-   Installation
-   ------------
+Installation
+------------
 
-..
-   pyZDCF can be installed using pip
+pyZDCF can be installed using pip:
 
-   .. code:: sh
+.. code:: sh
 
-      pip install pyzdcf
+   pip install pyzdcf
 
 **Dependencies**
 
