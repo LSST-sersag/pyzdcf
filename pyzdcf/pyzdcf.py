@@ -5,7 +5,7 @@ __credits__ = ["Andjelka Kovacevic", "Dragana Ilic", "Paula Sanchez Saez", "Robe
 __maintainer__ = "Isidora Jankov"
 __contact__ = "isidora_jankov@matf.bg.ac.rs"
 __license__ = "MIT License"
-__version__ = "0.0.0"
+__version__ = "1.0.0"
 
 # Imports
 
