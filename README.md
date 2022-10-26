@@ -166,15 +166,13 @@ You can write to us:
 - if there are any problems running the code on your system;
 - suggestions for code improvements.
 
-If you want to report a bug, please open an Issue on GitHub.
-
-Project Link: [https://github.com/LSST-sersag/pyzdcf](https://github.com/LSST-sersag/pyzdcf)
+If you want to report a bug, please open an Issue on GitHub: [https://github.com/LSST-sersag/pyzdcf](https://github.com/LSST-sersag/pyzdcf).
 
 
 ## Citation
 
 If you use pyZDCF for scientific work leading to a publication, 
-please consider acknowledging it using the following citation:
+please consider acknowledging it using the following citation (BibTeX):
 
 ```
 @software{jankov_isidora_2022_7253034,
@@ -193,6 +191,7 @@ please consider acknowledging it using the following citation:
 }
 ```
 
+For other citation formats see: [https://doi.org/10.5281/zenodo.7253034](https://doi.org/10.5281/zenodo.7253034)
 
 ## Acknowledgments
 
