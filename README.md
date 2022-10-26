@@ -135,7 +135,7 @@ dcf_df = pyzdcf(input_dir  = input,
 
 </br>
 
-- For more examples see [example notebook](https://github.com/LSST-sersag/dle-private/blob/main/pyZDCF/notebooks/examples.ipynb).
+- For more examples see [example notebook](https://github.com/LSST-sersag/pyzdcf/blob/main/notebooks/examples.ipynb).
 
 - Additionally, you can also check out code description of the original Fortran version because the majority of input parameters and all output files are the same as in pyZDCF. You can download the fortran source code [here](https://www.weizmann.ac.il/particle/tal/research-activities/software).
 
