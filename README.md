@@ -173,7 +173,26 @@ Project Link: [https://github.com/LSST-sersag/pyzdcf](https://github.com/LSST-se
 
 ## Citation
 
-Coming soon!
+If you use pyZDCF for scientific work leading to a publication, 
+please consider acknowledging it using the following citation:
+
+```
+@software{jankov_isidora_2022_7253034,
+  author       = {Jankov, Isidora and
+                  Kovačević, Andjelka B. and
+                  Ilić, Dragana and
+                  Sánchez-Sáez, Paula and
+                  Nikutta, Robert},
+  title        = {pyZDCF: Initial Release},
+  month        = oct,
+  year         = 2022,
+  publisher    = {Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.7253034},
+  url          = {https://doi.org/10.5281/zenodo.7253034}
+}
+```
+
 
 ## Acknowledgments
 

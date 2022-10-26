@@ -226,7 +226,9 @@ Project Link: https://github.com/LSST-sersag/pyzdcf
 Citation
 --------
 
-Coming soon!
+If you use pyZDCF for scientific work leading to a publication, 
+please consider acknowledging it using the following DOI: `<https://doi.org/10.5281/zenodo.7253034>`__
+
 
 API documentation
 -----------------
