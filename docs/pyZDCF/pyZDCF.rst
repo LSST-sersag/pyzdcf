@@ -15,7 +15,7 @@ points).
 
 pyZDCF is based on the original Fortran code fully developed by 
 Prof. Tal Alexander from Weizmann Institute of Science, Israel 
-(see Acknowledgements and References for details and further reading).
+(see :ref:`Acknowledgements <ackn>` and :ref:`References <refer>` for details and further reading).
 
 
 Motivation
@@ -38,8 +38,8 @@ pyZDCF can be installed using pip:
 
    pip install pyzdcf
 
-**Dependencies**
-
+Dependencies
+~~~~~~~~~~~~
 
    ::
 
@@ -52,7 +52,8 @@ pyZDCF can be installed using pip:
 How to use
 ----------
 
-**Input files**
+Input files
+~~~~~~~~~~~
 
 This code requires user-provided plain text files as input. CSV files
 are accepted by default, but you can use any other delimited file, as
@@ -70,9 +71,17 @@ First few lines of the example input file accepted by default (CSV):
    2.0,0.9637198686651904,0.0019274397373303808
    3.0,0.9622807967282166,0.0019245615934564328
    
-**NOTE:** pyZDCF is tested only with input files having whole numbers (integers) for time column. If you have decimal numbers (e.g., you have a light curve with several measurments in the same night expressed as fractions of a day instead of minutes), just convert them into a time format with integer values (e.g., minutes instead of days). On the other hand, you could round the values from the same day (e.g. 5.6 --> 5, 5.8 --> 5, etc.) and the algorithm will take in the information and average the flux for that day. 
+.. note::
+   pyZDCF is tested only with input files having whole numbers (integers) for 
+   time column. If you have decimal numbers (e.g., you have a light curve with 
+   several measurments in the same night expressed as fractions of a day 
+   instead of minutes), just convert them into a time format with integer 
+   values (e.g., minutes instead of days). On the other hand, you could round 
+   the values from the same day (e.g. 5.6 --> 5, 5.8 --> 5, etc.) and the 
+   algorithm will take in the information and average the flux for that day. 
    
-**Input parameters**
+Input parameters
+~~~~~~~~~~~~~~~~
 
 If you use interactive mode (``intr = True``), then pyZDCF will ask you to
 enter all input parametars interactively, similarly to original ZDCF interface.
@@ -92,21 +101,22 @@ Available input parameters (keys in the ``parameters`` dictionary) are:
 
 For more information on the correct syntax, see "Running the code" subsection and the "API Documentation" section.
 
-**Output**
+Output
+~~~~~~
 
 The return value of the ``pyzdcf`` function is a ``pandas.DataFrame`` object
 displaying the results in 7 columns:
 
-::
+.. csv-table::
+   :header: index,tau,-sig(tau),+sig(tau),dcf,-err(dcf),+err(dcf),#bin
+   :widths: 5,10,12,12,12,12,12,5
+   
+   0,-991,4,0,0.13598,0.361559,0.342224,10
+   1,-988,2,0,-0.217733,0.279988,0.301034,13
+   2,-985,2,0,-0.0614938,0.266546,0.27135,16
+   3,-982,2,0,0.239601,0.237615,0.223317,19
+   4,-979,2,0,0.331415,0.208171,0.192523,22
 
-   +---+-------+-------------+-------------+--------------+-------------+-------------+------+
-   |   |   tau |   -sig(tau) |   +sig(tau) |          dcf |   -err(dcf) |   +err(dcf) | #bin |
-   |---+-------+-------------+-------------+--------------+-------------+-------------+------|
-   | 0 |  -991 |           4 |           0 |  0.13598     |  0.361559   |  0.342224   |   10 |
-   | 1 |  -988 |           2 |           0 | -0.217733    |  0.279988   |  0.301034   |   13 |
-   | 2 |  -985 |           2 |           0 | -0.0614938   |  0.266546   |  0.27135    |   16 |
-   | 3 |  -982 |           2 |           0 |  0.239601    |  0.237615   |  0.223317   |   19 |
-   | 4 |  -979 |           2 |           0 |  0.331415    |  0.208171   |  0.192523   |   22 |
 
 The columns are: time-lag, negative time-lag std, positive time-lag std,
 zdcf, negative zdcf sampling error, positive zdcf sampling error, number
@@ -122,7 +132,8 @@ Optionally, by adding keyword argument ``savelc = True``, ``pyzdcf`` can
 create and save light curve files used as input after averaging points
 with identical times.
 
-**Running the code**
+Running the code
+~~~~~~~~~~~~~~~~
 
 An example for calculating cross-correlation between two light curves:
 
@@ -184,11 +195,17 @@ Features
 --------
 
 -  Added an option to use **sparse matrix implementation** for reduced
-   RAM usage when working with long light curves (>3000 points). The main benefit is that we can now run these demanding calculations on our own personal computers (8 GB of RAM is enough for light curves containing up to 15000 points), making the usage of this algorithm more convinient than ever. You can turn this on/off by specifying ``sparse`` keyword argument to ``True`` or ``False``. Default value is ``'auto'``, where sparse marices are utilized when there are more than 3000 points per light curve. Note that by reducing RAM usage, we pay in increased program running time.
-
+   RAM usage when working with long light curves (>3000 points). 
+      - The main benefit is that we can now run these demanding calculations
+       on our own personal computers (8 GB of RAM is enough for light curves 
+       containing up to 15000 points), making the usage of this algorithm more
+       convinient than ever. You can turn this on/off by specifying ``sparse`` 
+       keyword argument to ``True`` or ``False``. Default value is ``'auto'``, 
+       where sparse marices are utilized when there are more than 3000 points
+       per light curve. Note that by reducing RAM usage, we pay in increased 
+       program running time.
 -  **Interactive mode**: program specifically asks the user to provide
    necessary parameters (similar to original Fortran version);
-
 -  **Manual mode**: user can provide all parameters in one dictionary.
 
 
@@ -221,6 +238,7 @@ please consider acknowledging it using the following DOI: `<https://doi.org/10.5
 
 Acknowledgments
 ---------------
+.. _ackn:
 
 -  The pyZDCF module is based on the original Fortran code developed by
    Prof. Tal Alexander (Weizmann Institute of Science, Israel). You can download original Fortran version from professor’s 
@@ -235,8 +253,10 @@ Acknowledgments
    development of pyZDCF module and for its acknowledgment as part of the
    legacy behind late Prof. Alexander.
 
+
 References
 ----------
+.. _refer:
 
 -  `Alexander, T. 1997, in: Astronomical Time Series, eds. D. Maoz, A.
    Sternberg, & E. M. Leibowitz, Vol. 218, Springer, Is AGN Variability
