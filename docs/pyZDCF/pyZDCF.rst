@@ -1,14 +1,3 @@
-.. pyzdcf_dev documentation master file, created by
-   sphinx-quickstart on Fri Oct 14 12:07:46 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-pyZDCF
-==========
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-   
 
 Description
 -----------
@@ -26,18 +15,17 @@ pyZDCF is based on the original Fortran code fully developed by
 Prof. Tal Alexander from Weizmann Institute of Science, Israel 
 (see Acknowledgements and References for details and further reading).
 
-blalll
 
 Motivation
 ----------
 
 Development of pyZDCF module was motivated by the long and successful usage of 
 the original ZDCF Fortran code in the analysis of light curves of active galactic
-nuclei by our research group (see `Kovacevic et al. 2014 <https://ui.adsabs.harvard.edu/abs/2014AdSpR..54.1414K/abstract>`__,
-`Shapovalova et al. 2019 <https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.4790S/abstract>`__,
+nuclei by our research group (see `Kovacevic et al. 2014 <https://ui.adsabs.harvard.edu/abs/2014AdSpR..54.1414K/abstract>`__,
+`Shapovalova et al. 2019 <https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.4790S/abstract>`__,
 and reference therein). One of the science cases we investigate is photometric reverberation
 mapping in the context of Legacy Survey of Space and Time (LSST) survey strategies (see `Jankov et
-al. 2022 <https://ui.adsabs.harvard.edu/abs/2022AN....34310090J/abstract>`__). However, this module is **general** and is meant to be used for cross-correlation of spectroscopic or photometric light curves, same as the original Fortran version.
+al. 2022 <https://ui.adsabs.harvard.edu/abs/2022AN....34310090J/abstract>`__). However, this module is **general** and is meant to be used for cross-correlation of spectroscopic or photometric light curves, same as the original Fortran version.
 
 Installation
 ------------
@@ -229,42 +217,37 @@ If you use pyZDCF for scientific work leading to a publication,
 please consider acknowledging it using the following DOI: `<https://doi.org/10.5281/zenodo.7253034>`__
 
 
-API documentation
------------------
-   
-.. autofunction:: pyzdcf.pyzdcf
-
 Acknowledgments
 ---------------
 
 -  The pyZDCF module is based on the original Fortran code developed by
-   Prof. Tal Alexander (Weizmann Institute of Science, Israel). You can download original Fortran version from professor’s 
+   Prof. Tal Alexander (Weizmann Institute of Science, Israel). You can download original Fortran version from professor’s 
    `page <https://www.weizmann.ac.il/particle/tal/research-activities/software>`__.
 -  For theoretical details regarding the ZDCF algorithm see this publication: `Alexander 1997 <https://ui.adsabs.harvard.edu/abs/1997ASSL..218..163A/abstract>`__.
--  Huge thanks to my closest collegues and mentors Dr. Andjelka
-   Kovačević and Dr. Dragana Ilić, as well as to Dr. Paula Sánchez-Sáez
-   and Dr. Robert Nikutta for invaluable input during the development
+-  Huge thanks to my closest collegues and mentors Dr. Andjelka
+   Kovačević and Dr. Dragana Ilić, as well as to Dr. Paula Sánchez-Sáez
+   and Dr. Robert Nikutta for invaluable input during the development
    and testing of this python module.  
--  Many thanks to Prof. Eli Waxman, Amir Bar On and former students of
-   Prof. Tal Alexander for their kind assistance regarding the
+-  Many thanks to Prof. Eli Waxman, Amir Bar On and former students of
+   Prof. Tal Alexander for their kind assistance regarding the
    development of pyZDCF module and for its acknowledgment as part of the
-   legacy behind late Prof. Alexander.
+   legacy behind late Prof. Alexander.
 
 References
 ----------
 
--  `Alexander, T. 1997, in: Astronomical Time Series, eds. D. Maoz, A.
+-  `Alexander, T. 1997, in: Astronomical Time Series, eds. D. Maoz, A.
    Sternberg, & E. M. Leibowitz, Vol. 218, Springer, Is AGN Variability
    Correlated with Other AGN Properties? ZDCF Analysis of Small Samples
    of Sparse Light
    Curves <https://ui.adsabs.harvard.edu/abs/1997ASSL..218..163A/abstract>`__
--  `Jankov, I.; Kovačević A. B.; Ilić, D.; et al. 2022, Astronomische
+-  `Jankov, I.; Kovačević A. B.; Ilić, D.; et al. 2022, Astronomische
    Nachrichten, 343,
    e210090 <https://ui.adsabs.harvard.edu/abs/2022AN....34310090J/abstract>`__
--  `Kovačević, A.; Popović, L. Č.; Shapovalova, A. I.; et al. 2014,
+-  `Kovačević, A.; Popović, L. Č.; Shapovalova, A. I.; et al. 2014,
    Advances in Space Research, 54,
    1414-1428 <https://ui.adsabs.harvard.edu/abs/2014AdSpR..54.1414K/abstract>`__
--  `Shapovalova, A. I.; Popović, L. Č.; Afanasiev, V. L.; et al. 2019,
+-  `Shapovalova, A. I.; Popović, L. Č.; Afanasiev, V. L.; et al. 2019,
    MNRAS, 485,
    4790-4803 <https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.4790S/abstract>`__
    
