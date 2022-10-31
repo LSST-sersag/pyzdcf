@@ -69,7 +69,7 @@ Available input parameters (keys in the `parameters` dictionary) are:
 - `lc1_name` - Name of the first light curve file
 - `lc2_name` - Name of the second light curve file (required only if we do cross-correlation)
 
-For more information on the correct syntax, see "Running the code" subsection and the "API Documentation" section.
+For more information on the correct syntax, see "Running the code" subsection.
 
 
 ### Output
