@@ -1,8 +1,7 @@
 # pyZDCF
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7253034.svg)](https://doi.org/10.5281/zenodo.7253034)
-![pypi](https://img.shields.io/pypi/v/pyzdcf)
-
+[![pypi](https://img.shields.io/pypi/v/pyzdcf)](https://pypi.org/project/pyzdcf/)
 
 **pyZDCF** is a Python module that emulates a widely used Fortran program called ZDCF (Z-transformed Discrete Correlation Function, [Alexander 1997](https://ui.adsabs.harvard.edu/abs/1997ASSL..218..163A/abstract)). It is used for robust estimation of cross-correlation function of sparse and unevenly sampled astronomical time-series. This Python implementation also introduces sparse matrices in order to significantly reduce RAM usage when running the code on large time-series (> 3000 points).
 
