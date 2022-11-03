@@ -16,8 +16,6 @@ Development of pyZDCF module was motivated by the long and successful usage of
 the original ZDCF Fortran code in the analysis of light curves of active galactic
 nuclei by our research group (see [Kovacevic et al. 2014](https://ui.adsabs.harvard.edu/abs/2014AdSpR..54.1414K/abstract), [Shapovalova et al. 2019](https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.4790S/abstract), and reference therein). One of the science cases we investigate is photometric reverberation mapping in the context of Legacy Survey of Space and Time (LSST) survey strategies (see [Jankov et al. 2022](https://ui.adsabs.harvard.edu/abs/2022AN....34310090J/abstract)). However, this module is **general** and is meant to be used for cross-correlation of spectroscopic or photometric light curves, same as the original Fortran version.
 
-Test
-
 ## Installation
 
 pyZDCF can be installed using pip:
