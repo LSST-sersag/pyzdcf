@@ -2,4 +2,4 @@
 **/.ipynb_checkpoints
 **/.pytest_cache
 **/.spyproject
-**/._build
+**/_build
