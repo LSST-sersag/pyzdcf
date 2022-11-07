@@ -24,6 +24,7 @@ Prof. Tal Alexander from Weizmann Institute of Science, Israel
    :caption: Contents:
    
    pyZDCF/pyZDCF.rst
+   Examples/examples.ipynb
    API-docs/API.rst
 
    
