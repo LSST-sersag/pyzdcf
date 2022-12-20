@@ -70,8 +70,10 @@ def read_obs(
 
     lc.sort_values(by="t", ascending=True, inplace=True)
 
-    # Average the observations with identical times
-    lc = lc.groupby("t").mean().reset_index()
+    # Average the observations with identical times (first row is not contibuting in averaging)
+    lc_agg = lc.iloc[1:].groupby("t").mean().reset_index()
+    lc_fin = pd.concat([lc.iloc[0].to_frame().T, lc_agg]).reset_index(drop=True)
+    lc = lc_fin
 
     # Save .lc file (condensed)
     if savelc == True:
@@ -954,32 +956,32 @@ def pyzdcf(
 
 if __name__ == "__main__":
     # Use interactive mode when running pyzdcf as a script
-    input_dir = input("Enter the path to the directory containing input data: ")
-    output_dir = input("Enter the path to the directory for storing the results: ")
-    dcf_df = pyzdcf(input_dir, output_dir, intr=True, sep=",")
-    pd.set_option("display.max_rows", None, "display.max_columns", None)
-    print(dcf_df)
+    # input_dir = input("Enter the path to the directory containing input data: ")
+    # output_dir = input("Enter the path to the directory for storing the results: ")
+    # dcf_df = pyzdcf(input_dir, output_dir, intr=True, sep=",")
+    # pd.set_option("display.max_rows", None, "display.max_columns", None)
+    # print(dcf_df)
     # to get more pretty table you can use `tabulate` module (pip install tabulate)
     #print(tabulate(dcf_df, headers="keys", tablefmt="psql"))
 
     # Manual mode (change parameters to your liking and then run this script)
-    # input_dir = './'
-    # output_dir = './'
-    # lc1 = 'name1'
-    # lc2 = 'name2'
-    # params = {"autocf": False, 
-    #           "prefix": 'pref', 
-    #           "uniform_sampling" : False, 
-    #           "omit_zero_lags" : True,
-    #           "minpts" : 0,
-    #           "num_MC" : 100,
-    #           "lc1_name" : lc1,
-    #           "lc2_name" : lc2}
-    # #params = (False,'ccfFT100',False,True,0,100,lc1,lc2)
-    # dcf_df = pyzdcf(input_dir,
-    #                 output_dir,
-    #                 intr=True,
-    #                 parameters = params,
-    #                 sep=',',
-    #                 verbose=True,
-    #                 sparse='auto')
+    input_dir = '/home/isidora/Projects/pyzdcf-test-git/tests/ztf/ztf_lcs/'
+    output_dir = '/home/isidora/Projects/pyzdcf-test-git/tests/ztf/ztf_lcs/results_py/'
+    lc1 = 'lc6_g.csv'
+    #lc2 = 'name2'
+    params = {"autocf": True, 
+              "prefix": 'pref_test_acfFF1', 
+              "uniform_sampling" : False, 
+              "omit_zero_lags" : False,
+              "minpts" : 0,
+              "num_MC" : 1,
+              "lc1_name" : lc1}#,
+              #"lc2_name" : lc2}
+    dcf_df = pyzdcf(input_dir,
+                    output_dir,
+                    intr=False,
+                    parameters = params,
+                    sep=',',
+                    verbose=True,
+                    sparse='auto',
+                    savelc=True)
