@@ -194,7 +194,7 @@ An example for calculating cross-correlation between two light curves:
 Features
 --------
 
--  Added an option to use **sparse matrix implementation** for reduced
+-  **Sparse matrix implementation** for reduced
    RAM usage when working with long light curves (>3000 points). 
       - The main benefit is that we can now run these demanding calculations
        on our own personal computers (8 GB of RAM is enough for light curves 
@@ -207,6 +207,12 @@ Features
 -  **Interactive mode**: program specifically asks the user to provide
    necessary parameters (similar to original Fortran version);
 -  **Manual mode**: user can provide all parameters in one dictionary.
+-  **Fixed bugs** from original ZDCF (v2.3) written in Fortran 95.
+
+.. note::
+   The module was tested (i.e., compared with original ZDCF v2.3 output, with fixed bugs) for various parameter combinations on a set of 100 AGN light curve candidates (*g* and *r* bands). 
+   The list of object ids and coordinates was taken from a combined catalogue of known AGNs (`Sánchez-Sáez et al. 2021 <https://ui.adsabs.harvard.edu/abs/2021AJ....162..206S/abstract>`__).
+
 
 
 License
@@ -217,11 +223,11 @@ Distributed under the MIT License.
 Contact
 -------
 
-   | **Isidora Jankov (main)** - isidora_jankov@matf.bg.ac.rs
+   | **Isidora Jankov (main)** - isidora.jankov@matf.bg.ac.rs
    | Andjelka Kovačević - andjelka@matf.bg.ac.rs
    | Dragana Ilić - dilic@matf.bg.ac.rs
 
-You can write to us: 
+You are wlcome to write to us:
 	- if there are any problems running the code on your system;
 	- to give suggestions for code improvements.
 
@@ -269,6 +275,9 @@ References
 -  `Kovačević, A.; Popović, L. Č.; Shapovalova, A. I.; et al. 2014,
    Advances in Space Research, 54,
    1414-1428 <https://ui.adsabs.harvard.edu/abs/2014AdSpR..54.1414K/abstract>`__
+-  `Sánchez-Sáez, P.; Lira, H.; Martí, L.; et al. 2021,
+   The Astronomical Journal, 162,
+   id.206 <https://ui.adsabs.harvard.edu/abs/2021AJ....162..206S/abstract>`__
 -  `Shapovalova, A. I.; Popović, L. Č.; Afanasiev, V. L.; et al. 2019,
    MNRAS, 485,
    4790-4803 <https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.4790S/abstract>`__

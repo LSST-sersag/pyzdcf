@@ -4,15 +4,14 @@
 [![pypi](https://img.shields.io/pypi/v/pyzdcf)](https://pypi.org/project/pyzdcf/)
 [![Documentation Status](https://readthedocs.org/projects/pyzdcf/badge/?version=latest)](https://pyzdcf.readthedocs.io/en/latest/?badge=latest)
 ![](https://img.shields.io/pypi/pyversions/pyzdcf?color=gree)
-[![downloads](https://img.shields.io/pypi/dm/pyzdcf)](https://img.shields.io/pypi/dm/pyzdcf)
 
 **pyZDCF** is a Python module that emulates a widely used Fortran program called ZDCF (Z-transformed Discrete Correlation Function, [Alexander 1997](https://ui.adsabs.harvard.edu/abs/1997ASSL..218..163A/abstract)). It is used for robust estimation of cross-correlation function of sparse and unevenly sampled astronomical time-series. This Python implementation also introduces sparse matrices in order to significantly reduce RAM usage when running the code on large time-series (> 3000 points).
 
 pyZDCF is based on the original Fortran code fully developed by 
 Prof. Tal Alexander from Weizmann Institute of Science, Israel 
-(see Acknowledgements and References for details and further reading).
+(see [Acknowledgements](#ackn) and [References](#ref) for details and further reading).
 
-Full docs with examples: https://pyzdcf.readthedocs.io/
+Full docs with examples: [pyzdcf.readthedocs.io](https://pyzdcf.readthedocs.io/)
 
 ## Motivation
 
@@ -155,7 +154,7 @@ dcf_df = pyzdcf(input_dir  = input,
 
 ## Features
 
-* Added an option to use **sparse matrix implementation** for reduced RAM usage when working with long light curves (>3000 points);
+* **Sparse matrix implementation** for reduced RAM usage when working with long light curves (>3000 points);
 > The main benefit is that we can now run these demanding calculations on our own personal computers (8 GB of RAM is enough for
 > light curves containing up to 15000 points), making the usage of this algorithm more convinient than ever.
 > 
@@ -163,7 +162,9 @@ dcf_df = pyzdcf(input_dir  = input,
 
 * **Interactive mode**: program specifically asks the user to provide necessary parameters (similar to original Fortran version);
 * **Manual mode**: user can provide all parameters in one dictionary.
+* **Fixed bugs** from original ZDCF (v2.3) written in Fortran 95.
 
+The module was tested (i.e., compared with original ZDCF v2.3 output, with fixed bugs) for various parameter combinations on a set of 100 AGN light curve candidates (*g* and *r* bands). The list of object ids and coordinates was taken from a combined catalogue of known AGNs ([Sánchez-Sáez et al. 2021](https://ui.adsabs.harvard.edu/abs/2021AJ....162..206S/abstract)).
 
 ## License
 
@@ -171,11 +172,11 @@ Distributed under the MIT License.
 
 ## Contact
 
->**Isidora Jankov (main)** - isidora_jankov@matf.bg.ac.rs  
+>**Isidora Jankov (main)** - isidora.jankov@matf.bg.ac.rs  
 >Andjelka Kovačević - andjelka@matf.bg.ac.rs  
 >Dragana Ilić - dilic@matf.bg.ac.rs
 
-You can write to us:
+You are wlcome to write to us:
 - if there are any problems running the code on your system;
 - suggestions for code improvements.
 
@@ -206,17 +207,18 @@ please consider acknowledging it using the following citation (BibTeX):
 
 For other citation formats see: [https://doi.org/10.5281/zenodo.7253034](https://doi.org/10.5281/zenodo.7253034)
 
-## Acknowledgments
+## <a name="ackn" />Acknowledgments
 
 * The pyZDCF module is based on the original Fortran code developed by Prof. Tal Alexander (Weizmann Institute of Science, Israel). Download Fortran version from professor's [page](https://www.weizmann.ac.il/particle/tal/research-activities/software).  
 * For theoretical details regarding the ZDCF algorithm see this publication: [Alexander, T. (1997)](https://ui.adsabs.harvard.edu/abs/1997ASSL..218..163A/abstract).  
 * Huge thanks to my closest collegues and mentors Dr. Andjelka Kovačević and Dr. Dragana Ilić, as well as to Dr. Paula Sánchez-Sáez and Dr. Robert Nikutta for invaluable input during the development and testing of this python module.  
 * Many thanks to Prof. Eli Waxman, Amir Bar On and former students of Prof. Tal Alexander for their kind assistance regarding the development of pyZDCF module and its acknowledgment as part of the legacy behind late Prof. Alexander.
 
-## References
+## <a name="ref" />References
 * [Alexander, T. 1997, in: Astronomical Time Series, eds. D. Maoz, A. Sternberg, & E. M. Leibowitz, Vol. 218, Springer, Is AGN Variability Correlated with Other AGN Properties? ZDCF Analysis of Small Samples of Sparse Light Curves](https://ui.adsabs.harvard.edu/abs/1997ASSL..218..163A/abstract)
 * [Jankov, I.; Kovačević A. B.; Ilić, D.; et al. 2022, Astronomische Nachrichten, 343, e210090](https://ui.adsabs.harvard.edu/abs/2022AN....34310090J/abstract)
 * [Kovačević, A.; Popović, L. Č.; Shapovalova, A. I.; et al. 2014, Advances in Space Research, 54, 1414-1428](https://ui.adsabs.harvard.edu/abs/2014AdSpR..54.1414K/abstract)
+* [Sánchez-Sáez, P.; Lira, H.; Martí, L.; et al. 2021,The Astronomical Journal, 162, id.206](https://ui.adsabs.harvard.edu/abs/2021AJ....162..206S/abstract)
 * [Shapovalova, A. I.; Popović, L. Č.; Afanasiev, V. L.; et al. 2019, MNRAS, 485, 4790-4803](https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.4790S/abstract)
 
 
