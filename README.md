@@ -176,7 +176,7 @@ Distributed under the MIT License.
 >Andjelka Kovačević - andjelka@matf.bg.ac.rs  
 >Dragana Ilić - dilic@matf.bg.ac.rs
 
-You are wlcome to write to us:
+You are welcome to write to us:
 - if there are any problems running the code on your system;
 - suggestions for code improvements.
 
