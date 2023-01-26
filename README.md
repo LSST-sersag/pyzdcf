@@ -172,7 +172,7 @@ Distributed under the MIT License.
 
 ## Contact
 
->**Isidora Jankov (main)** - isidora.jankov@matf.bg.ac.rs  
+>**Isidora Jankov (main)** - ijankov@proton.me  
 >Andjelka Kovačević - andjelka@matf.bg.ac.rs  
 >Dragana Ilić - dilic@matf.bg.ac.rs
 
