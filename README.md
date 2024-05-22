@@ -29,8 +29,8 @@ pip install pyzdcf
 
 ### Dependencies
 >```
->python = ">=3.8,<3.11"
->numpy = ">=1.16.5,<1.23.0"
+>python = ">=3.8,<3.12"
+>numpy = ">=1.16.5"
 >pandas = "^1.3"
 >scipy = "^1.7.3"
 >```

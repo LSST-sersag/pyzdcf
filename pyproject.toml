@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyzdcf"
-version = "1.0.0"
+version = "1.0.2"
 description = "Python module used for robust estimation of cross-corelation functions of sparse and unevenly sampled astronomical time-series. It emulates a Fortran program called ZDCF which is based on the Z-transformed Discrete Correlation Function algorithm (ZDCF, Alexander 1997)."
 authors = ["Isidora Jankov <isidora_jankov@matf.bg.ac.rs>"]
 readme = "README.md"
@@ -20,8 +20,8 @@ include = [
 repository = "https://github.com/LSST-sersag/pyzdcf"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.11"
-numpy = ">=1.16.5,<1.23.0"
+python = ">=3.8,<3.12"
+numpy = ">=1.16.5"
 pandas = "^1.3"
 scipy = "^1.7.3"
 
