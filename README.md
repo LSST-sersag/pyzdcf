@@ -28,12 +28,21 @@ pip install pyzdcf
 ```
 
 ### Dependencies
+
 >```
->python = ">=3.8,<3.12"
->numpy = ">=1.16.5"
->pandas = "^1.3"
->scipy = "^1.7.3"
+>python = ">=3.9,<3.14"
+>numpy = "^1.21.6"
+>pandas = "^2.2.3"
+>scipy = "^1.11"
 >```
+
+Older versions of `pyzdcf` support older versions of Python, see table for details:
+
+| `pyzdcf` Version | Supported Python Versions | Notes                                            |
+| ---------------- | ------------------------- | -------------------------------------------------|
+| `>= 1.0.3`       | 3.9 – 3.13                | Requires newer dependencies (e.g. pandas ≥2.2.3) |
+| `<= 1.0.2`       | 3.8 – 3.11                | Compatible with older environments               |
+
 
 ## How to use
 

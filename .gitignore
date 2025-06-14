@@ -3,4 +3,5 @@
 **/.pytest_cache
 **/.spyproject
 **/_build
+/dist
 CHANGELOG.md
